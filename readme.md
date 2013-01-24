@@ -11,6 +11,8 @@ Features
 Special Comment Syntax
 ----------------------
 
+### Explicit Variable Scope
+
 Additionally, special comments can take one of the following 3 forms:
 * ; arg: paramName @ R12
 * ; add: variableName @ R12
@@ -46,3 +48,7 @@ For comments in this form the register (e.g R12) will be highlighted as a regist
 	</dict>
 
 The idea is that when you use a register, you name the variable that the register contains and notify readers that the variable has entered scope by commenting `; add: variableName @ R5`. When the variable is no longer needed, you can notify readers that variable is no longer in scope by commenting `; del: variableName @ R5`. Then when you need a spare register later on you just have to look for the last deleted variable that doesn't have a corresponding new variable in the same register. The initial variables are the arguments, and should be commented at the beginning of a function by `; arg: paramName @ R12`.
+
+### C Code in Comments
+
+Comments that start with `;c` instead of just `;` are taken to be C code, and will invoke the C grammer. This can be used to easily document the assembly code by showing its equivalent C. 

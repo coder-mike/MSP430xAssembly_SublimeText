@@ -127,6 +127,19 @@
 			</dict>
 		</dict>
 		<dict>
+			<key>begin</key>
+			<string>;c</string>
+			<key>end</key>
+			<string>$\n?</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>source.c</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
 			<key>name</key>
 			<string>comment.line.double-slash.msp430x</string>
 			<key>begin</key>
